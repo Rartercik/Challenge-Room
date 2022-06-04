@@ -1,0 +1,801 @@
+fileFormatVersion: 2
+guid: 6cdb45a1af04f944bb70eb51ef526bb5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7933151052947592688
+    second: Idle1
+  - first:
+      213: 6421583318308878501
+    second: Idle2
+  - first:
+      213: -2284356647812022336
+    second: Idle3
+  - first:
+      213: -4695371012306159991
+    second: Idle4
+  - first:
+      213: 8188018912336923475
+    second: Idle5
+  - first:
+      213: -4739150371764417940
+    second: Run1
+  - first:
+      213: -1444300983848072731
+    second: Run2
+  - first:
+      213: 3730506544518716991
+    second: Run3
+  - first:
+      213: 6272634966041905018
+    second: Run4
+  - first:
+      213: -5239752355671369243
+    second: Run5
+  - first:
+      213: 4088792954236947237
+    second: Run6
+  - first:
+      213: 637340142484185988
+    second: Run7
+  - first:
+      213: -5570837499142110421
+    second: Run8
+  - first:
+      213: 7155655987301169031
+    second: Dwarf Sprite Sheet 1.3v_13
+  - first:
+      213: -5765066590674352404
+    second: Dwarf Sprite Sheet 1.3v_14
+  - first:
+      213: 2793392095891709325
+    second: Dwarf Sprite Sheet 1.3v_15
+  - first:
+      213: -3701848791201854600
+    second: Dwarf Sprite Sheet 1.3v_16
+  - first:
+      213: 6812815248511060826
+    second: Dwarf Sprite Sheet 1.3v_17
+  - first:
+      213: 9063505448664726912
+    second: Dwarf Sprite Sheet 1.3v_18
+  - first:
+      213: 5310273069113426463
+    second: Dwarf Sprite Sheet 1.3v_19
+  - first:
+      213: 7326540966908402965
+    second: Dwarf Sprite Sheet 1.3v_20
+  - first:
+      213: 2121563582435844789
+    second: Dwarf Sprite Sheet 1.3v_21
+  - first:
+      213: 1291069287688131164
+    second: Dwarf Sprite Sheet 1.3v_22
+  - first:
+      213: 5459641666797580647
+    second: Dwarf Sprite Sheet 1.3v_23
+  - first:
+      213: -4442126564864482021
+    second: Dwarf Sprite Sheet 1.3v_24
+  - first:
+      213: 4337494371225634432
+    second: Dwarf Sprite Sheet 1.3v_25
+  - first:
+      213: 7778308355920897438
+    second: Dwarf Sprite Sheet 1.3v_26
+  - first:
+      213: -7927576874435031380
+    second: Dwarf Sprite Sheet 1.3v_27
+  - first:
+      213: -5742778112869331364
+    second: Jump1
+  - first:
+      213: -2789211029108323184
+    second: Jump2
+  - first:
+      213: -4950288878928892303
+    second: Jump3
+  - first:
+      213: 9005068957283970367
+    second: Jump4
+  - first:
+      213: -4992760597246590441
+    second: Jump5
+  - first:
+      213: -2724768523771189810
+    second: Dwarf Sprite Sheet 1.3v_33
+  - first:
+      213: 7616202036808625319
+    second: Dwarf Sprite Sheet 1.3v_34
+  - first:
+      213: -7548773107287995603
+    second: Dwarf Sprite Sheet 1.3v_35
+  - first:
+      213: -1308346360813573011
+    second: Dwarf Sprite Sheet 1.3v_36
+  - first:
+      213: 5610369657654661984
+    second: Death1
+  - first:
+      213: -7899823161787311049
+    second: Death2
+  - first:
+      213: 8883736493553572971
+    second: Death3
+  - first:
+      213: -7351262074211469184
+    second: Death4
+  - first:
+      213: -1582643312693903474
+    second: Death5
+  - first:
+      213: -5627546536537525161
+    second: Death6
+  - first:
+      213: 653381950976527975
+    second: Death7
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Idle1
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 227
+        width: 24
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01aea832629c7e190800000000000000
+      internalID: -7933151052947592688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle2
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 227
+        width: 26
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a8ff57410c0e1950800000000000000
+      internalID: 6421583318308878501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 227
+        width: 24
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cfbcda5bb55c40e0800000000000000
+      internalID: -2284356647812022336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle4
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 227
+        width: 24
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98633d201f0b6deb0800000000000000
+      internalID: -4695371012306159991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle5
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 227
+        width: 24
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35bc50c91dfa1a170800000000000000
+      internalID: 8188018912336923475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run1
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 196
+        width: 26
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6a42d198d72b3eb0800000000000000
+      internalID: -4739150371764417940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run2
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 198
+        width: 27
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e90dfc48efc4fbe0800000000000000
+      internalID: -1444300983848072731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run3
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 196
+        width: 26
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3ede4aefeb65c330800000000000000
+      internalID: 3730506544518716991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run4
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 195
+        width: 24
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a774f9c8440ec0750800000000000000
+      internalID: 6272634966041905018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run5
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 196
+        width: 22
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e911317ef8a847b0800000000000000
+      internalID: -5239752355671369243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run6
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 197
+        width: 20
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52bc96d478f4eb830800000000000000
+      internalID: 4088792954236947237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run7
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 196
+        width: 22
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 483edd99b7948d800800000000000000
+      internalID: 637340142484185988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run8
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 195
+        width: 24
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2385326fc860b2b0800000000000000
+      internalID: -5570837499142110421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jump1
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 67
+        width: 24
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5e098e9bbd8d40b0800000000000000
+      internalID: -5742778112869331364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jump2
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 70
+        width: 26
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09c856ec85bba49d0800000000000000
+      internalID: -2789211029108323184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jump3
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 72
+        width: 26
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17e60eb0e7a0d4bb0800000000000000
+      internalID: -4950288878928892303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jump4
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 72
+        width: 26
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3deec8718e68fc70800000000000000
+      internalID: 9005068957283970367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jump5
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 67
+        width: 24
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 712cc8880b626bab0800000000000000
+      internalID: -4992760597246590441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death1
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 3
+        width: 24
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 063d2278a790cdd40800000000000000
+      internalID: 5610369657654661984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death2
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 3
+        width: 26
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73c934d70b03e5290800000000000000
+      internalID: -7899823161787311049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death3
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 3
+        width: 27
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6c5f68d54f594b70800000000000000
+      internalID: 8883736493553572971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death4
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 2
+        width: 26
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 088f2d797121bf990800000000000000
+      internalID: -7351262074211469184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death5
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 2
+        width: 26
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8f7bb4da42590ae0800000000000000
+      internalID: -1582643312693903474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death6
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 3
+        width: 27
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75473b4bd30f6e1b0800000000000000
+      internalID: -5627546536537525161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death7
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 2
+        width: 29
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76e8b923c67411900800000000000000
+      internalID: 653381950976527975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
