@@ -1,25 +1,30 @@
 using UnityEngine;
+using Game;
 
-namespace UI
+namespace Interface
 {
     public class MoveButton : MonoBehaviour
     {
-        [SerializeField] Player _player;
-        [SerializeField] Vector2 _direction;
-        [SerializeField] MoveButton _anotherButton;
+        [SerializeField] private Player _player;
+        [SerializeField] private Vector2 _direction;
+        [SerializeField] private MoveButton _anotherButton;
 
         public bool IsActive { get; private set; }
 
         private void FixedUpdate()
         {
-            if(IsActive)
+            if (IsActive)
+            {
                 _player.Move(_direction);
+            }
         }
 
         public void TryMovePlayer()
         {
             if (_anotherButton.IsActive == false)
+            {
                 IsActive = true;
+            }
         }
 
         public void StopMoving()

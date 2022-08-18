@@ -147,6 +147,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -156,8 +157,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -1120,6 +1121,48 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Dungeon1_36: -3171852898790939208
+      Dungeon1_13: 4972237907058051051
+      Dungeon1_9: -4418696415264868521
+      Dungeon1_15: 2514186836580232427
+      BackWall: 8894256851220086511
+      Dungeon1_38: -2438852851090020894
+      Dungeon1_17: 987281739001786223
+      Dungeon1_22: -6018078305295485042
+      Dungeon1_29: 638278476714730106
+      Dungeon1_25: -3214020013887970884
+      Dungeon1_18: -7134589576231365050
+      Dungeon1_23: -8927948562805968812
+      Dungeon1_10: 5127945985025483818
+      Dungeon1_21: -6570963964425333347
+      Dungeon1_2: 3775088828492989452
+      Dungeon1_30: -6734875551623697568
+      Dungeon1_32: 8143709045293848180
+      Dungeon1_27: -7709005597328439393
+      Dungeon1_39: 2773502818933803946
+      Dungeon1_6: -2510025011242301990
+      Dungeon1_35: -428181685804181366
+      Dungeon1_34: 2191938594237420687
+      platform: -6315629243169937073
+      Dungeon1_33: -9119744771623628170
+      Dungeon1_28: -7474155633580668392
+      Dungeon1_1: -187251043586072471
+      Dungeon1_12: -8121544172982774717
+      Dungeon1_0: 5633595496526079969
+      Dungeon1_16: 5841125812577583332
+      Dungeon1_24: -7737457102544359403
+      Dungeon1_20: 4591177898029712188
+      Dungeon1_40: -4512510137357174785
+      Dungeon1_7: -6089410434772780915
+      Dungeon1_31: 6084181910151306011
+      Wall: -8316864623394700221
+      Dungeon1_5: -424935767654942266
+      Dungeon1_11: -3553918297408517189
+      Dungeon1_19: 3549361070262079549
+      Dungeon1_8: -3230697641494294105
+      Dungeon1_14: -2510928915325135585
+      UI: -7895267580335433797
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

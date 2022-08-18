@@ -1,12 +1,13 @@
 using UnityEngine;
 using UnityEngine.Events;
+using Game;
 
-namespace UI
+namespace Interface
 {
     public class StartButton : MonoBehaviour
     {
-        [SerializeField] Game _game;
-        [SerializeField] UnityEvent OnGameStarted;
+        [SerializeField] private GameProcessor _game;
+        [SerializeField] private UnityEvent OnGameStarted;
 
         public void StartGame()
         {

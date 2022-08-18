@@ -1,13 +1,16 @@
 using UnityEngine;
 
-public class Arrow : MonoBehaviour
+namespace Game
 {
-    private void OnCollisionEnter2D(Collision2D collision)
+    public class Arrow : MonoBehaviour
     {
-        if (collision.gameObject.TryGetComponent(out Player player))
+        private void OnCollisionEnter2D(Collision2D collision)
         {
-            player.StartDying();
-            gameObject.SetActive(false);
+            if (collision.gameObject.TryGetComponent(out Player player))
+            {
+                player.StartDying();
+                gameObject.SetActive(false);
+            }
         }
     }
 }

@@ -1,39 +1,42 @@
 using UnityEngine;
 
-public abstract class AttackInstanceFactory : MonoBehaviour
+namespace Game
 {
-    [SerializeField] int _minAttacksCount;
-    [SerializeField] int _maxAttacksCount;
-    [SerializeField] int _attacksCount;
-    [SerializeField] int _attacksCounChangeFrequency;
-    [SerializeField] int _attacksIncreaseCount;
-
-    protected int MaxAttacksCount => _maxAttacksCount;
-
-    public void UpdateFactory(int timeInSeconds)
+    public abstract class AttackInstanceFactory : MonoBehaviour
     {
-        UpdateAttacksCount(timeInSeconds);
+        [SerializeField] private int _minAttacksCount;
+        [SerializeField] private int _maxAttacksCount;
+        [SerializeField] private int _attacksCount;
+        [SerializeField] private int _attacksCounChangeFrequency;
+        [SerializeField] private int _attacksIncreaseCount;
 
-        if (GetAttackAvailable())
+        protected int MaxAttacksCount => _maxAttacksCount;
+
+        public void UpdateFactory(int timeInSeconds)
         {
-            var finalAttacksCount = Random.Range(_minAttacksCount, _attacksCount);
-            Attack(finalAttacksCount);
+            UpdateAttacksCount(timeInSeconds);
+
+            if (GetAttackAvailable())
+            {
+                var finalAttacksCount = Random.Range(_minAttacksCount, _attacksCount);
+                Attack(finalAttacksCount);
+            }
         }
-    }
 
-    protected abstract void Attack(int attacksCount);
+        protected abstract void Attack(int attacksCount);
 
-    protected abstract bool GetAttackAvailable();
+        protected abstract bool GetAttackAvailable();
 
-    private void UpdateAttacksCount(int timeInSeconds)
-    {
-        if (timeInSeconds % _attacksCounChangeFrequency == 0)
+        private void UpdateAttacksCount(int timeInSeconds)
         {
-            var increasedAttacksCount = _attacksCount + _attacksIncreaseCount;
-            if (increasedAttacksCount < _maxAttacksCount)
-                _attacksCount = increasedAttacksCount;
-            else
-                _attacksCount = _maxAttacksCount;
+            if (timeInSeconds % _attacksCounChangeFrequency == 0)
+            {
+                var increasedAttacksCount = _attacksCount + _attacksIncreaseCount;
+                if (increasedAttacksCount < _maxAttacksCount)
+                    _attacksCount = increasedAttacksCount;
+                else
+                    _attacksCount = _maxAttacksCount;
+            }
         }
     }
 }

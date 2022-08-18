@@ -1,12 +1,16 @@
 using UnityEngine;
+using Game;
 
-public class JumpButton : MonoBehaviour
+namespace Interface
 {
-    [SerializeField] Player _player;
-
-    public void TryJump()
+    public class JumpButton : MonoBehaviour
     {
-        if (_player.CanJump)
-            _player.Jump();
+        [SerializeField] private Player _player;
+
+        public void TryJump()
+        {
+            if (_player.CanJump)
+                _player.Jump();
+        }
     }
 }

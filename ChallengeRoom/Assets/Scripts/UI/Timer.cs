@@ -3,42 +3,45 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Text))]
-public class Timer : MonoBehaviour
+namespace Interface
 {
-    private Text _text;
-    private Action<int> _onEverySecond;
-    private int _seconds;
-
-    private void Start()
+    [RequireComponent(typeof(Text))]
+    public class Timer : MonoBehaviour
     {
-        _text = GetComponent<Text>();
-    }
+        private Text _text;
+        private Action<int> _onEverySecond;
+        private int _seconds;
 
-    public void StartTimer(Action<int> onEverySecond)
-    {
-        gameObject.SetActive(true);
-        StartCoroutine(ExecuteEverySecond());
-        _onEverySecond = onEverySecond;
-    }
+        private void Start()
+        {
+            _text = GetComponent<Text>();
+        }
 
-    private IEnumerator ExecuteEverySecond()
-    {
-        yield return new WaitForSeconds(1);
+        public void StartTimer(Action<int> onEverySecond)
+        {
+            gameObject.SetActive(true);
+            StartCoroutine(ExecuteEverySecond());
+            _onEverySecond = onEverySecond;
+        }
 
-        _seconds++;
-        _text.text = GetFormatTime(_seconds);
+        private IEnumerator ExecuteEverySecond()
+        {
+            yield return new WaitForSeconds(1);
 
-        _onEverySecond(_seconds);
-        StartCoroutine(ExecuteEverySecond());
-    }
+            _seconds++;
+            _text.text = GetFormatTime(_seconds);
 
-    private string GetFormatTime(int seconds)
-    {
-        var minutes = seconds / 60;
-        var tenSeconds = seconds % 60 / 10;
-        var singleSeconds = seconds % 10;
+            _onEverySecond(_seconds);
+            StartCoroutine(ExecuteEverySecond());
+        }
 
-        return string.Format("{0}:{1}{2}", minutes, tenSeconds, singleSeconds);
+        private string GetFormatTime(int seconds)
+        {
+            var minutes = seconds / 60;
+            var tenSeconds = seconds % 60 / 10;
+            var singleSeconds = seconds % 10;
+
+            return string.Format("{0}:{1}{2}", minutes, tenSeconds, singleSeconds);
+        }
     }
 }

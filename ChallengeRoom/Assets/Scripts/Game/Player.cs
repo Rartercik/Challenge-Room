@@ -1,61 +1,64 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(Animator))]
-[RequireComponent(typeof(SpriteRenderer))]
-public class Player : MonoBehaviour
+namespace Game
 {
-    [SerializeField] float _speed;
-    [SerializeField] float _jumpPower;
-    [SerializeField] LayerMask _groundLayer;
-    [SerializeField] float _distanceToGround;
-    [SerializeField] GameObject _gameOverWindow;
-
-    private Rigidbody2D _rigidbody;
-    private Animator _animator;
-    private SpriteRenderer _renderer;
-    private Transform _transform;
-
-    public bool CanJump => Physics2D.Raycast(_transform.position, Vector2.down, _distanceToGround, _groundLayer);
-
-    private void Start()
+    [RequireComponent(typeof(Rigidbody2D))]
+    [RequireComponent(typeof(Animator))]
+    [RequireComponent(typeof(SpriteRenderer))]
+    public class Player : MonoBehaviour
     {
-        _rigidbody = GetComponent<Rigidbody2D>();
-        _animator = GetComponent<Animator>();
-        _renderer = GetComponent<SpriteRenderer>();
-        _transform = transform;
-    }
+        [SerializeField] private float _speed;
+        [SerializeField] private float _jumpPower;
+        [SerializeField] private LayerMask _groundLayer;
+        [SerializeField] private float _distanceToGround;
+        [SerializeField] private GameObject _gameOverWindow;
 
-    public void StartDying()
-    {
-        if(_animator.GetCurrentAnimatorStateInfo(0).IsName("Death") == false)
-            _animator.SetTrigger("Die");
-    }
+        private Rigidbody2D _rigidbody;
+        private Animator _animator;
+        private SpriteRenderer _renderer;
+        private Transform _transform;
 
-    public void Move(Vector2 diraction)
-    {
-        _rigidbody.velocity = new Vector2(_speed * diraction.x, _rigidbody.velocity.y);
-        var isLeft = diraction.x < 0;
-        _renderer.flipX = isLeft;
-        _animator.SetTrigger("Run");
-    }
+        public bool CanJump => Physics2D.Raycast(_transform.position, Vector2.down, _distanceToGround, _groundLayer);
 
-    public void StopMove()
-    {
-        _rigidbody.velocity = new Vector2(0, _rigidbody.velocity.y);
-        _animator.ResetTrigger("Run");
-        _animator.SetTrigger("Idle");
-    }
+        private void Start()
+        {
+            _rigidbody = GetComponent<Rigidbody2D>();
+            _animator = GetComponent<Animator>();
+            _renderer = GetComponent<SpriteRenderer>();
+            _transform = transform;
+        }
 
-    public void Jump()
-    {
-        _rigidbody.AddForce(Vector2.up * _jumpPower);
-        _animator.SetTrigger("Jump");
-    }
+        public void StartDying()
+        {
+            if (_animator.GetCurrentAnimatorStateInfo(0).IsName("Death") == false)
+                _animator.SetTrigger("Die");
+        }
 
-    private void Die()
-    {
-        Time.timeScale = 0;
-        _gameOverWindow.SetActive(true);
+        public void Move(Vector2 diraction)
+        {
+            _rigidbody.velocity = new Vector2(_speed * diraction.x, _rigidbody.velocity.y);
+            var isLeft = diraction.x < 0;
+            _renderer.flipX = isLeft;
+            _animator.SetTrigger("Run");
+        }
+
+        public void StopMove()
+        {
+            _rigidbody.velocity = new Vector2(0, _rigidbody.velocity.y);
+            _animator.ResetTrigger("Run");
+            _animator.SetTrigger("Idle");
+        }
+
+        public void Jump()
+        {
+            _rigidbody.AddForce(Vector2.up * _jumpPower);
+            _animator.SetTrigger("Jump");
+        }
+
+        private void Die()
+        {
+            Time.timeScale = 0;
+            _gameOverWindow.SetActive(true);
+        }
     }
 }

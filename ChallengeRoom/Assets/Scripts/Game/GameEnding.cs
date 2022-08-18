@@ -1,11 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameEnding : MonoBehaviour
+namespace Game
 {
-    public void RestartScene()
+    public class GameEnding : MonoBehaviour
     {
-        Time.timeScale = 1;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        public void RestartScene()
+        {
+            Time.timeScale = 1;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 }
