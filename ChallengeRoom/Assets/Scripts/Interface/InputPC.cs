@@ -11,12 +11,9 @@ namespace Interface
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) && _player.CanJump)
             {
-                if (_player.CanJump)
-                {
-                    _player.Jump();
-                }
+                _player.Jump();
             }
         }
 

@@ -25,9 +25,9 @@ namespace Game
         private IEnumerator DeleteAfter(int seconds, Action onDestroy)
         {
             yield return new WaitForSeconds(seconds);
-            onDestroy.Invoke();
             _destroyAnimator.Play("Destroy");
             gameObject.SetActive(false);
+            onDestroy.Invoke();
         }
     }
 }

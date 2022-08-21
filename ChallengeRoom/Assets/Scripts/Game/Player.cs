@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Game
 {
@@ -12,6 +13,7 @@ namespace Game
         [SerializeField] private LayerMask _groundLayer;
         [SerializeField] private float _distanceToGround;
         [SerializeField] private GameObject _gameOverWindow;
+        [SerializeField] private UnityEvent _onDead;
 
         private Rigidbody2D _rigidbody;
         private Animator _animator;
@@ -51,7 +53,7 @@ namespace Game
 
         public void Jump()
         {
-            _rigidbody.AddForce(Vector2.up * _jumpPower);
+            _rigidbody.AddForce(Vector2.up * _jumpPower, ForceMode2D.Impulse);
             _animator.SetTrigger("Jump");
         }
 
@@ -59,6 +61,7 @@ namespace Game
         {
             Time.timeScale = 0;
             _gameOverWindow.SetActive(true);
+            _onDead?.Invoke();
         }
     }
 }

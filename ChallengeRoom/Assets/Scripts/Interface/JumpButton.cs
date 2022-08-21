@@ -10,7 +10,9 @@ namespace Interface
         public void TryJump()
         {
             if (_player.CanJump)
+            {
                 _player.Jump();
+            }
         }
     }
 }

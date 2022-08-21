@@ -32,10 +32,7 @@ namespace Game
             if (timeInSeconds % _attacksCounChangeFrequency == 0)
             {
                 var increasedAttacksCount = _attacksCount + _attacksIncreaseCount;
-                if (increasedAttacksCount < _maxAttacksCount)
-                    _attacksCount = increasedAttacksCount;
-                else
-                    _attacksCount = _maxAttacksCount;
+                _attacksCount = increasedAttacksCount < _maxAttacksCount ? increasedAttacksCount : _maxAttacksCount;
             }
         }
     }

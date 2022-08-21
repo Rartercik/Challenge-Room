@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Game
@@ -16,8 +17,11 @@ namespace Game
         private void Start()
         {
             _spikeInvokers = _spikeInvokersParent.GetComponentsInChildren<SpikeInvoker>(false);
+
             if (MaxAttacksCount > _spikeInvokers.Length)
+            {
                 throw new System.FieldAccessException("Max count of invoked spikes can`t be bigger than count of spikes");
+            }
         }
 
         protected override bool GetAttackAvailable()
@@ -30,10 +34,14 @@ namespace Game
             var spikeInvokers = GetRandomSpikeInvokers(_spikeInvokers, attacksCount);
 
             foreach (var spikeInvoker in spikeInvokers)
+            {
                 spikeInvoker.StartInvoke(_spikesLifetimeInSeconds, () => _canAttack = true);
+            }
 
-            if (attacksCount > 0 && _canAttack)
+            if (attacksCount > 0)
+            {
                 _canAttack = false;
+            }
         }
 
         private IEnumerable<SpikeInvoker> GetRandomSpikeInvokers(IEnumerable<SpikeInvoker> spikeInvokers, int count)
@@ -47,7 +55,6 @@ namespace Game
                 result.Push(list[randomIndex]);
                 list.RemoveAt(randomIndex);
             }
-
             return result;
         }
     }
