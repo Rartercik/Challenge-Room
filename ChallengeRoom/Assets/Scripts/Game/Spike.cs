@@ -12,7 +12,7 @@ namespace Game
         {
             if (collision.gameObject.TryGetComponent(out Player player))
             {
-                player.StartDying();
+                player.TryApplyDamage();
             }
         }
 

@@ -8,6 +8,7 @@ namespace Game
     {
         [SerializeField] private UnityEvent _onGameStarted;
         [SerializeField] private AttackInstanceFactory[] _attackInstanceFactories;
+        [SerializeField] private ShieldsFactory _shieldsFactory;
         [SerializeField] private Timer _timer;
 
         public void StartGame()
@@ -20,6 +21,8 @@ namespace Game
         {
             foreach (var factory in _attackInstanceFactories)
                 factory.UpdateFactory(seconds);
+
+            _shieldsFactory.UpdateFactory();
         }
     }
 }

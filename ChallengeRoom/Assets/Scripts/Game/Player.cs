@@ -1,67 +1,49 @@
+using Sirenix.OdinInspector;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace Game
 {
-    [RequireComponent(typeof(Rigidbody2D))]
-    [RequireComponent(typeof(Animator))]
-    [RequireComponent(typeof(SpriteRenderer))]
+    [RequireComponent(typeof(PlayerMovement))]
+    [RequireComponent(typeof(PlayerInteraction))]
     public class Player : MonoBehaviour
     {
-        [SerializeField] private float _speed;
-        [SerializeField] private float _jumpPower;
-        [SerializeField] private LayerMask _groundLayer;
-        [SerializeField] private float _distanceToGround;
-        [SerializeField] private GameObject _gameOverWindow;
-        [SerializeField] private UnityEvent _onDead;
+        [Header("Required Components:")]
+        [Space(5)]
+        [SerializeField] private PlayerMovement _movement;
+        [SerializeField] private PlayerInteraction _interaction;
 
-        private Rigidbody2D _rigidbody;
-        private Animator _animator;
-        private SpriteRenderer _renderer;
-        private Transform _transform;
-
-        public bool CanJump => Physics2D.Raycast(_transform.position, Vector2.down, _distanceToGround, _groundLayer);
-
-        private void Start()
+        [Button]
+        private void SetRequiredComponents()
         {
-            _rigidbody = GetComponent<Rigidbody2D>();
-            _animator = GetComponent<Animator>();
-            _renderer = GetComponent<SpriteRenderer>();
-            _transform = transform;
+            _movement = GetComponent<PlayerMovement>();
+            _interaction = GetComponent<PlayerInteraction>();
         }
 
-        public void StartDying()
-        {
-            if (_animator.GetCurrentAnimatorStateInfo(0).IsName("Death") == false)
-                _animator.SetTrigger("Die");
-        }
+        public bool CanJump => _movement.CanJump;
 
-        public void Move(Vector2 diraction)
+        public void Move(Vector2 direction)
         {
-            _rigidbody.velocity = new Vector2(_speed * diraction.x, _rigidbody.velocity.y);
-            var isLeft = diraction.x < 0;
-            _renderer.flipX = isLeft;
-            _animator.SetTrigger("Run");
+            _movement.Move(direction);
         }
 
         public void StopMove()
         {
-            _rigidbody.velocity = new Vector2(0, _rigidbody.velocity.y);
-            _animator.ResetTrigger("Run");
-            _animator.SetTrigger("Idle");
+            _movement.StopMove();
         }
 
         public void Jump()
         {
-            _rigidbody.AddForce(Vector2.up * _jumpPower, ForceMode2D.Impulse);
-            _animator.SetTrigger("Jump");
+            _movement.Jump();
         }
 
-        private void Die()
+        public void TryApplyDamage()
         {
-            Time.timeScale = 0;
-            _gameOverWindow.SetActive(true);
-            _onDead?.Invoke();
+            _interaction.TryApplyDamage();
+        }
+
+        public void MakeImmortal()
+        {
+            _interaction.MakeImmortal();
         }
     }
 }

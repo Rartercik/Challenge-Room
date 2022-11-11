@@ -5,7 +5,7 @@ namespace Game
 {
     public class ArrowsFactory : AttackInstanceFactory
     {
-        [SerializeField] private GameObject _arrowPrefab;
+        [SerializeField] private Arrow _arrowPrefab;
         [SerializeField] private float _arrowMaxDeflection;
         [SerializeField] private float _arrowSpeed;
         [SerializeField] private float _instantiateDistance;
@@ -48,7 +48,7 @@ namespace Game
 
             var arrow = Instantiate(_arrowPrefab, arrowPosition, arrowRotation);
             var arrowVelocity = Quaternion.Euler(0, 0, arrowDeflection) * -directionFromFactory.normalized * _arrowSpeed;
-            arrow.GetComponent<Rigidbody2D>().velocity = arrowVelocity;
+            arrow.Rigidbody.velocity = arrowVelocity;
         }
 
         private Vector3 CalculateArrowPosition(Vector2 factoryPosition, Vector2 directionFromFactory, float instantiateDistance)
