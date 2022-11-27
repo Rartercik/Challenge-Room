@@ -168,9 +168,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3af591e1507c7d34b8175286ab36e203, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _startEffect: {fileID: 3208783565392042101}
   _effect: {fileID: 1909883103732575030}
   _effectTransform: {fileID: 8847024387228601087}
-  _timeToSwitchOff: 10
+  _lifetime: 7
+  _transform: {fileID: 3208355237839443779}
   _rigidbody: {fileID: 3208355237839443782}
 --- !u!1 &4333200707835781243
 GameObject:

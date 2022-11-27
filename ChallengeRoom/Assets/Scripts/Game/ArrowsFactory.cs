@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Pool;
 
 namespace Game
 {
@@ -12,11 +13,13 @@ namespace Game
         [SerializeField] private int _attackReloadInSeconds;
         [SerializeField] private float zPosition;
 
+        private IObjectPool<Arrow> _pool;
         private Transform _transform;
         private bool _canAttack = true;
 
         private void Start()
         {
+            _pool = new ObjectPool<Arrow>(CreateArrow, DoOnGetActions, (arrow) => SetActivityTo(arrow, false));
             _transform = transform;
         }
 
@@ -29,7 +32,7 @@ namespace Game
         {
             for (int i = 0; i < attacksCount; i++)
             {
-                CreateArrow();
+                _pool.Get();
             }
 
             _canAttack = false;
@@ -37,18 +40,32 @@ namespace Game
 
         }
 
-        private void CreateArrow()
+        private Arrow CreateArrow()
         {
+            var arrow = Instantiate(_arrowPrefab);
+            arrow.OnSwitchedOff += (arrow) => _pool.Release(arrow);
+
+            return arrow;
+        }
+
+        private void DoOnGetActions(Arrow arrow)
+        {
+            SetActivityTo(arrow, true);
             var directionFromFactory = Random.insideUnitCircle.normalized;
 
             var arrowPosition = CalculateArrowPosition(_transform.position, directionFromFactory, _instantiateDistance);
-
             var arrowDeflection = Random.Range(-_arrowMaxDeflection, _arrowMaxDeflection);
             var arrowRotation = CalculateArrowRotation(-directionFromFactory, arrowDeflection);
-
-            var arrow = Instantiate(_arrowPrefab, arrowPosition, arrowRotation);
             var arrowVelocity = Quaternion.Euler(0, 0, arrowDeflection) * -directionFromFactory.normalized * _arrowSpeed;
+
+            arrow.Transform.position = arrowPosition;
+            arrow.Transform.rotation = arrowRotation;
             arrow.Rigidbody.velocity = arrowVelocity;
+        }
+
+        private void SetActivityTo(Arrow arrow, bool active)
+        {
+            arrow.gameObject.SetActive(active);
         }
 
         private Vector3 CalculateArrowPosition(Vector2 factoryPosition, Vector2 directionFromFactory, float instantiateDistance)

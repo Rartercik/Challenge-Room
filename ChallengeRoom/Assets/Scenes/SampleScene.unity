@@ -31666,7 +31666,7 @@ MonoBehaviour:
   _minAttacksCount: 0
   _maxAttacksCount: 6
   _attacksCount: 1
-  _attacksCounChangeFrequency: 10
+  _attacksCountChangeFrequency: 10
   _attacksIncreaseCount: 1
   _spikeInvokersParent: {fileID: 2106484177}
   _spikesLifetimeInSeconds: 4
@@ -35434,7 +35434,7 @@ MonoBehaviour:
   _minAttacksCount: 1
   _maxAttacksCount: 10
   _attacksCount: 2
-  _attacksCounChangeFrequency: 10
+  _attacksCountChangeFrequency: 10
   _attacksIncreaseCount: 1
   _arrowPrefab: {fileID: 3208355237839443778, guid: f6198a140722d50478e7f7f01465773f, type: 3}
   _arrowMaxDeflection: 15
